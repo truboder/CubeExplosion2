@@ -36,7 +36,6 @@ public class Clicker : MonoBehaviour
                     else
                     {
                         _explosion.Explode(cube);
-                        Destroy(cube.gameObject);
                     }
                 }
             }

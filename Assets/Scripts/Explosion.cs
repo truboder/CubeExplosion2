@@ -13,6 +13,7 @@ public class Explosion : MonoBehaviour
             if (hitCube.attachedRigidbody != null)
             {
                 hitCube.attachedRigidbody.AddExplosionForce(cube.ExplosionForce, cube.transform.position, cube.ExplosionRadius);
+                Destroy(cube.gameObject);
             }
         }
     }
