@@ -10,6 +10,8 @@ public class Clicker : MonoBehaviour
 
     private int _mousseButtonTrigger = 0;
 
+    private Explosion _explosion = new Explosion();
+
     private void Update()
     {
         Click();
@@ -33,6 +35,7 @@ public class Clicker : MonoBehaviour
                     }
                     else
                     {
+                        _explosion.Explode(cube);
                         Destroy(cube.gameObject);
                     }
                 }

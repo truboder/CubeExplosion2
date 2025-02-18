@@ -21,12 +21,17 @@ public class Cube : MonoBehaviour
         _coloring.SetRandomColor(GetComponent<Renderer>());
     }
 
-    public void Reduce()
+    public void ChangeStats()
     {
         float reduction = 2.0f;
 
         transform.localScale /= reduction;
         _splitChance /= reduction;
+
+        float _scaler = 1.5f;
+
+        _explosionForce *= _scaler;
+        _explosionRadius *= _scaler;
     }
 
     public void AddForce(Vector3 position, float force, float radius)

@@ -26,7 +26,7 @@ public class Spawner : MonoBehaviour
     {
         Cube childrenCube = Instantiate(cube, cube.transform.position, cube.transform.rotation);
                 
-        childrenCube.Reduce();
+        childrenCube.ChangeStats();
 
         return childrenCube;
     }
